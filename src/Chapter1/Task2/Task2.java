@@ -9,7 +9,10 @@ public class Task2 {
         System.out.print("Введите целочисленное значение (как положительное, так и отрицательное):\t");
         int degreeOfAngle = scanner.nextInt();
 
+        //Решение с помощью %
         System.out.println("Нормализация с использованием %:\t"+(degreeOfAngle%360+360)%360); //Если использовать просто degreeOfAngle%360, то при вводе отрицательного угла, значения выводятся неверно
+
+        //Решение с помощью Math.floorMod()
         System.out.println("Нормализация с использованием мтеода Math.floorMod:\t"+Math.floorMod(degreeOfAngle, 360));
     }
 }
